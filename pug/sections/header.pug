@@ -1,0 +1,40 @@
+header
+    mixin list(icon)
+        ul
+            -const navArr = ["home","news","about","features","pages","contact us"];
+            -for (let i = 0; i < navArr.length; i++)
+                li.poppins.transitioned-color= navArr[i]
+                    i(class=icon)
+    nav
+        .container
+            .row
+                .icon
+                    img(src="images/header/theme_clinika_logo.png")
+                .content
+                    .item
+                        +list
+                    .button.poppins
+                        button.transitioned-color appointment
+                .hid-icon(data-section="aside-section", data-overlay="overlay")
+                    i(class="fas fa-virus transitioned-color")
+
+    .aside-section(data-translate=".aside-section .wave")
+        i(class="fas fa-heartbeat")
+        +list
+        .wave.cover
+    .overlay
+
+    .header.cover
+        .wave.cover
+        .container
+            .row
+                .content
+                    .txt.bord
+                        h1.jost find a doctor &
+                            br
+                            |book appointment
+                        -const txt = "Since the first days of operation of Medify, our teaming has been focused on building a high-qualities medicals service by clinika.";
+                        p= txt
+                        button.main-btn.transitioned-bg-color.jost search speciality
+                    .img.bord.cover
+                        img(src="images/header/nurse-doctor.png")

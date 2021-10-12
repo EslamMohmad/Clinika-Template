@@ -1,0 +1,58 @@
+@import url(../../font/poppins.css);
+@import url(../../font/jost.css);
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-transform:capitalize
+}
+
+//main colors
+$black-color : #223441;
+$lightBlue-color : #4db0e1;
+$darkBlue-color : #006ba6;
+//main colors
+
+//main styles
+.transitioned-color {
+    transition: 0.2s ease-in-out color;
+}
+.transitioned-bg-color {
+    transition: 0.2s ease-in-out background-color;
+}
+.cover {
+    background-size: cover;
+}
+.main-btn {
+    padding: 15px 25px;
+    border: none;
+    border-radius: 30px;
+    outline: none;
+    background-color: $darkBlue-color;
+    font-size: 15px;
+    color: white;
+    text-transform: capitalize;
+    letter-spacing: 0.3px;
+    &:hover {
+        background-color: $lightBlue-color;
+    }
+}
+.jost {
+    font-family: "jost";
+}
+.poppins {
+    font-family: "poppins";
+}
+//main styles
+
+//bootstrap
+@media (max-width:576px) {
+    .container {
+        padding: 0 15px;
+        .row {
+            margin: auto;
+        }
+    }
+}
+//bootstrap

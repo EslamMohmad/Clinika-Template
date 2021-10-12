@@ -1,0 +1,187 @@
+header {
+    overflow: hidden;
+    position: relative;
+    height: 900px;
+    nav {
+        padding: 20px 0;
+        position: fixed;
+        z-index: 3;
+        width: 100%;
+        .icon {
+            img {
+                width: 180px;
+            }
+        }
+        .content {
+            display: flex;
+            .item {
+                margin-left: 100px;
+                ul {
+                    display: flex;
+                    margin: 0;
+                    height: 100%;
+                    align-items: center;
+                    li {
+                        color: white;
+                        list-style: none;
+                        cursor: pointer;
+                        &:not(:last-child) {
+                            margin-right: 30px;
+                        }
+                        i {
+                            margin-left: 10px;
+                        }
+                        &:nth-of-type(3),
+                        &:nth-of-type(6) {
+                            i {
+                                display: none;
+                            }
+                        }
+                    }
+                }
+            }
+            .button {
+                button {
+                    padding: 15px 35px; 
+                    border:none;
+                    border-radius:30px;
+                    outline:none;
+                    color:$black-color;
+                    text-transform: capitalize;
+                    background-color: white;
+                    margin-left: 50px;
+                    &:hover {
+                        color: $lightBlue-color;
+                    }
+                }
+            }
+        }
+        .hid-icon {
+            animation: rotate 13s linear infinite;
+            display: none;
+            cursor: pointer;
+            i {
+                font-size: 35px;
+                color: white;
+                line-height: 2em;
+                &:hover {
+                    color: $darkBlue-color;
+                }
+            }
+            @keyframes rotate {
+                100% {
+                    transform: rotate(360deg);
+                }
+            }
+        }
+    }
+    
+    .aside-section {
+        width: 280px;
+        height: 100vh;
+        background-color: $lightBlue-color;
+        position: fixed;
+        right: 0px;
+        top:0px;
+        z-index: 2;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s ease-in-out;
+        transition-property:transform;
+        .wave {
+            height: 100%;
+            width: 57%;
+            position: absolute;
+            left: -159px;
+            top:0;
+            background-image: url(../images/header/aside-wave.png);
+        }
+        i {
+            font-size: 250px;
+            color: rgba(255, 255, 255, 0.103);
+            position: absolute;
+            z-index: -1;
+            top: 50%;
+            transform: translateY(-50%);
+            left:10px;
+        }
+        ul {
+            margin: 0;
+            li {
+                color: white;
+                list-style: none;
+                font-size: 20px;
+                text-align: center;
+                cursor: pointer;
+                padding: 10px 0;
+                &:hover {
+                    color: $black-color;
+                }
+            }
+        }
+    }
+
+    .overlay {
+        width: 100%;
+        height: 100vh;
+        background-color: rgba(0, 0, 0,0.5);
+        position: fixed;
+        display: none;
+        top:0;
+        z-index: 1;
+        opacity: 0;
+        transition: 0.4s ease-in-out opacity;
+    }
+    .overlay.active {
+        opacity: 1;
+        display: block;
+    }
+    
+    .header {
+        position: relative;
+        height: 100%;
+        background-image: url(../images/header/header-01.jpg);
+        display: flex;
+        align-items: flex-end;
+        .wave {
+            position: absolute;
+            bottom: 0;
+            background-image: url(../images/header/wave.svg);
+            width: 100%;
+            height: 350px;
+        }
+        .content {
+            display: flex;
+            width: 100%;
+            margin-bottom: 150px;
+            .bord {
+                width: 50%;
+                max-height: 550px;
+            }
+            .txt {
+                color: white;
+                padding-top: 100px;
+                h1 {
+                    font-weight: bolder;
+                    font-size: 55px;
+                    line-height: 1;
+                    margin-bottom: 20px;
+                }
+                p {
+                    width: 92%;
+                    font-size: 16px;
+                    margin-bottom: 30px;
+                }
+            }
+            .img {
+                img {
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
+    }
+}
+//import responsive file
+@import "headerRes"
