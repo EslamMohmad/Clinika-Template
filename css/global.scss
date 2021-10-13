@@ -47,6 +47,21 @@ $darkBlue-color : #006ba6;
 //main styles
 
 //bootstrap
+@media (max-width: 992px) {
+    .container {
+        max-width: 100%;
+        .row {
+            margin:0
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        max-width:620px;
+    }
+}
+
 @media (max-width:576px) {
     .container {
         padding: 0 15px;
@@ -55,4 +70,5 @@ $darkBlue-color : #006ba6;
         }
     }
 }
+
 //bootstrap

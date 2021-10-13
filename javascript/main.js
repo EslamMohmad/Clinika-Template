@@ -1,25 +1,26 @@
 const hidIcon = document.querySelector(".hid-icon");
+const asideSection = document.querySelector(".aside-section")
+const aside = 
 hidIcon.onclick = function () {
     const overlay = document.querySelector("." + this.getAttribute("data-overlay"))
     overlay.classList.toggle("active");
     this.classList.toggle("active");
-    const aside = document.querySelector(".aside-section");
 
-    const asideSection =  getStyleVal("aside-section", "width");
+    const asideWidth =  getStyleVal("aside-section", "width");
     const wave =  getStyleVal("aside-section .wave", "width");
-    const result = (asideSection + wave).toString() + "px";
+    const result = (asideWidth + wave).toString() + "px";
 
 
-    if (!aside.classList.contains("active")) {
-        aside.classList.add("active")
-        aside.style.transform = "translateX(0px)"
+    if (!asideSection.classList.contains("active")) {
+        asideSection.classList.add("active")
+        asideSection.style.transform = "translateX(0px)"
     } else {
-        aside.classList.remove("active")
-        aside.style.transform = "translateX(" + result + ")";
+        asideSection.classList.remove("active")
+        asideSection.style.transform = "translateX(" + result + ")";
     }
 }
 
-//value style
+//value of style
 function getStyleVal(ele, style) {
     const Reg = new RegExp(/px/g);
     const element = document.querySelector("." + ele);
@@ -27,7 +28,15 @@ function getStyleVal(ele, style) {
     return Number(myStyle.replace(Reg,""));
 }
 
-const asideSection =  getStyleVal("aside-section", "width");
+const asideWidth =  getStyleVal("aside-section", "width");
 const wave =  getStyleVal("aside-section .wave", "width");
-const result = (asideSection + wave).toString() + "px";
-document.querySelector(".aside-section").style.transform = "translateX(" + result + ")"
+const result = (asideWidth + wave).toString() + "px";
+document.querySelector(".aside-section").style.transform = "translateX(" + result + ")";
+
+//close aside section and overlay
+const overlay = document.querySelector("header .overlay");
+overlay.onclick = function () {
+    this.classList.remove("active");
+    asideSection.style.transform = "translateX(" + result + ")";
+    asideSection.classList.remove("active")
+}

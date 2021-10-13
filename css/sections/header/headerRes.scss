@@ -40,9 +40,9 @@
     }
 }
 
-@media (max-width:767px) {
+@media (max-width:768px) {
     header{
-        min-height: 980px;
+        min-height: 1040px;
         .header {
             .content{
                 flex-direction: column;
@@ -66,7 +66,7 @@
         min-height: 900px;
         .header {
             .content {
-                margin-bottom: 110px;
+                margin-bottom: 170px;
                 .txt {
                     h1 {
                         font-size: 35px;

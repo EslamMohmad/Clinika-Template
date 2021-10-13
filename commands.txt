@@ -1,8 +1,8 @@
 cd PROJECTS\Locker\github-projects\clinika-Template
 -----------------------------------------------------
 pug :
-pug pug\main.pug -w -P -o ..\clinika-Template
+pug pug\index.pug -w -P -o ..\clinika-Template
 -----------------------------------------------------
 sass :
-sass css\main.scss css\index.css -w --no-source-map
+sass css\main.scss css\main.css -w --no-source-map
  
