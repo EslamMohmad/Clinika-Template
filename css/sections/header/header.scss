@@ -10,6 +10,7 @@ header {
         .icon {
             img {
                 width: 180px;
+                height: auto;
             }
         }
         .content {
@@ -73,6 +74,21 @@ header {
                     transform: rotate(360deg);
                 }
             }
+        }
+    }
+    nav.active {
+        background-color: white;
+        .content {
+            .item ul li {
+                color: $black-color;
+            }
+            button {
+                background-color: $black-color;
+                color: white;
+            }
+        }
+        .hid-icon i {
+            color: $black-color;
         }
     }
     

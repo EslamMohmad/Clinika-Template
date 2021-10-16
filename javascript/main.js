@@ -1,6 +1,5 @@
 const hidIcon = document.querySelector(".hid-icon");
 const asideSection = document.querySelector(".aside-section")
-const aside = 
 hidIcon.onclick = function () {
     const overlay = document.querySelector("." + this.getAttribute("data-overlay"))
     overlay.classList.toggle("active");
@@ -39,4 +38,18 @@ overlay.onclick = function () {
     this.classList.remove("active");
     asideSection.style.transform = "translateX(" + result + ")";
     asideSection.classList.remove("active")
+}
+
+//when scrolling 
+window.onscroll = function () {
+    let scrollTop = this.scrollY;
+    const navSection = document.querySelector("header nav");
+    const imgScr = document.querySelector("header nav .icon img");
+    if (scrollTop >= 100) {
+        navSection.classList.add("active")
+        imgScr.src = "images/header/theme_clinika_logo_dark.png";
+    } else {
+        navSection.classList.remove("active");
+        imgScr.src = "images/header/theme_clinika_logo.png";
+    }
 }

@@ -34,6 +34,10 @@
             .content{ 
                 .txt {
                     padding: 0 0 150px 0;
+                    width: 47%;
+                }
+                .img {
+                    width: 100% - 47;
                 }
             }
         }
@@ -42,7 +46,7 @@
 
 @media (max-width:768px) {
     header{
-        min-height: 1040px;
+        min-height: 800px;
         .header {
             .content{
                 flex-direction: column;
@@ -53,9 +57,14 @@
                 .txt {
                     padding: 0;
                 }
+                .img {
+                    height: 407px;
+                    width: 400px;
+                    margin:auto;
+                }
             }
             .wave {
-                height: 280px;
+                height: 170px;
             }
         }
     }
@@ -66,14 +75,19 @@
         min-height: 900px;
         .header {
             .content {
-                margin-bottom: 170px;
+                margin-bottom: 60px;
                 .txt {
+                    margin-bottom: 30px;
                     h1 {
                         font-size: 35px;
                     }
                     p {
                         width: 100%;
                     }
+                }
+                .img {
+                    width: 100%;
+                    height: auto;
                 }
             }
         }

@@ -1,0 +1,30 @@
+.about {
+    .content {
+        display: flex;
+        .bord {
+            width: 50%;
+        }
+        .img {
+            height: 400px;
+        }
+        .txt {
+            padding-top: 60px;
+            h1, p {
+                margin-bottom: 40px;
+            }
+            h1 {
+                font-family: "jost";
+                font-weight: bolder;
+                font-size: 33px;
+                text-transform: none;
+            }
+            p {
+                color:$gray-color;
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+//import responsive file
+@import "aboutRes"
