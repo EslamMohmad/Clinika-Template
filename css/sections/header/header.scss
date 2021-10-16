@@ -3,10 +3,12 @@ header {
     position: relative;
     height: 900px;
     nav {
-        padding: 20px 0;
         position: fixed;
         z-index: 3;
         width: 100%;
+        height: 90px;
+        display: flex;
+        align-items: center;
         .icon {
             img {
                 width: 180px;
@@ -75,6 +77,11 @@ header {
                 }
             }
         }
+        .hid-icon.active {
+            i {
+                color: $black-color;
+            }
+        }
     }
     nav.active {
         background-color: white;
@@ -95,7 +102,7 @@ header {
     .aside-section {
         width: 280px;
         height: 100vh;
-        background-color: $lightBlue-color;
+        background-color:white;
         position: fixed;
         right: 0px;
         top:0px;
@@ -111,11 +118,11 @@ header {
             position: absolute;
             left: -159px;
             top:0;
-            background-image: url(../images/header/aside-wave.png);
+            background-image: url(../images/header/aside-wave-test.png);
         }
         i {
             font-size: 250px;
-            color: rgba(255, 255, 255, 0.103);
+            color: rgba(77, 176, 225,0.25);
             position: absolute;
             z-index: -1;
             top: 50%;
@@ -125,14 +132,14 @@ header {
         ul {
             margin: 0;
             li {
-                color: white;
+                color: $black-color;
                 list-style: none;
                 font-size: 20px;
                 text-align: center;
                 cursor: pointer;
                 padding: 10px 0;
                 &:hover {
-                    color: $black-color;
+                    color: $lightBlue-color;
                 }
             }
         }
@@ -143,15 +150,9 @@ header {
         height: 100vh;
         background-color: rgba(0, 0, 0,0.5);
         position: fixed;
-        display: none;
         top:0;
         z-index: 1;
         opacity: 0;
-        transition: 0.4s ease-in-out opacity;
-    }
-    .overlay.active {
-        opacity: 1;
-        display: block;
     }
     
     .header {
@@ -178,6 +179,8 @@ header {
             .txt {
                 color: white;
                 padding-top: 100px;
+                position: relative;
+                z-index: 1;
                 h1 {
                     font-weight: bolder;
                     font-size: 55px;

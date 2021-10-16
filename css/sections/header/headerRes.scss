@@ -35,6 +35,9 @@
                 .txt {
                     padding: 0 0 150px 0;
                     width: 47%;
+                    h1 {
+                        font-size: 37px;
+                    }
                 }
                 .img {
                     width: 100% - 47;
@@ -72,17 +75,19 @@
 
 @media (max-width:420px) {
     header {
-        min-height: 900px;
+        min-height: 750px;
+        height: 750px;
         .header {
             .content {
                 margin-bottom: 60px;
                 .txt {
                     margin-bottom: 30px;
                     h1 {
-                        font-size: 35px;
+                        font-size: 27px;
                     }
                     p {
-                        width: 100%;
+                        width: 75%;
+                        font-size: 12px;
                     }
                 }
                 .img {

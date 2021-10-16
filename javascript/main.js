@@ -5,17 +5,28 @@ hidIcon.onclick = function () {
     overlay.classList.toggle("active");
     this.classList.toggle("active");
 
+    //fadeEffect(effect, element, speed) function
+    fadeEffect("fadeIn", ".overlay", 50)
+
     const asideWidth =  getStyleVal("aside-section", "width");
     const wave =  getStyleVal("aside-section .wave", "width");
     const result = (asideWidth + wave).toString() + "px";
 
+    const headerTxt = document.querySelector("header .txt");
 
     if (!asideSection.classList.contains("active")) {
         asideSection.classList.add("active")
-        asideSection.style.transform = "translateX(0px)"
+        asideSection.style.transform = "translateX(0px)";
+        //fadeEffect(effect, element, speed) function
+        fadeEffect("fadeIn", ".overlay", 50)
+        headerTxt.style.zIndex = 0;
     } else {
         asideSection.classList.remove("active")
         asideSection.style.transform = "translateX(" + result + ")";
+        //fadeEffect(effect, element, speed) function
+        fadeEffect("fadeOut", ".overlay", 50);
+        headerTxt.style.position = "relative";
+        headerTxt.style.zIndex = 1;
     }
 }
 
@@ -36,8 +47,11 @@ document.querySelector(".aside-section").style.transform = "translateX(" + resul
 const overlay = document.querySelector("header .overlay");
 overlay.onclick = function () {
     this.classList.remove("active");
+    //fadeEffect(effect, element, speed) function
+    fadeEffect("fadeOut", ".overlay", 50)
     asideSection.style.transform = "translateX(" + result + ")";
     asideSection.classList.remove("active")
+    hidIcon.classList.remove("active")
 }
 
 //when scrolling 
@@ -51,5 +65,43 @@ window.onscroll = function () {
     } else {
         navSection.classList.remove("active");
         imgScr.src = "images/header/theme_clinika_logo.png";
+    }
+}
+
+//fadeEffect(effect, element, speed) function
+function fadeEffect(effect, element, speed) {
+    const targetElement = document.querySelector(element);
+    const style = window.getComputedStyle(targetElement).getPropertyValue("opacity");
+    if (effect == "fadeIn") {
+        fadeIn()
+    } else if (effect == "fadeOut") {
+        fadeOut()
+    }
+    let opacityVal = Number(style);
+    //fadeIn
+    function fadeIn() {
+        const In = setInterval(_ => {
+            if (opacityVal <= 1) {
+                targetElement.style.display = "block";
+                targetElement.style.opacity = opacityVal;
+                opacityVal = opacityVal + 0.1;
+            } else {
+                clearInterval(In)
+            }
+        },speed)
+    }
+
+    //fadeOut
+    function fadeOut() {
+        const Out = setInterval(_ => {
+            if (opacityVal >= 0) {
+                targetElement.style.opacity = opacityVal;
+                opacityVal = opacityVal - 0.1;
+            } else {
+                targetElement.style.opacity = 0;
+                targetElement.style.display = "none";
+                clearInterval(Out)
+            }
+        },speed)
     }
 }

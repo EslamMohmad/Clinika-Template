@@ -74,10 +74,12 @@ header {
   height: 900px;
 }
 header nav {
-  padding: 20px 0;
   position: fixed;
   z-index: 3;
   width: 100%;
+  height: 90px;
+  display: flex;
+  align-items: center;
 }
 header nav .icon img {
   width: 180px;
@@ -140,6 +142,9 @@ header nav .hid-icon i:hover {
     transform: rotate(360deg);
   }
 }
+header nav .hid-icon.active i {
+  color: #223441;
+}
 header nav.active {
   background-color: white;
 }
@@ -156,7 +161,7 @@ header nav.active .hid-icon i {
 header .aside-section {
   width: 280px;
   height: 100vh;
-  background-color: #4db0e1;
+  background-color: white;
   position: fixed;
   right: 0px;
   top: 0px;
@@ -173,11 +178,11 @@ header .aside-section .wave {
   position: absolute;
   left: -159px;
   top: 0;
-  background-image: url(../images/header/aside-wave.png);
+  background-image: url(../images/header/aside-wave-test.png);
 }
 header .aside-section i {
   font-size: 250px;
-  color: rgba(255, 255, 255, 0.103);
+  color: rgba(77, 176, 225, 0.25);
   position: absolute;
   z-index: -1;
   top: 50%;
@@ -188,7 +193,7 @@ header .aside-section ul {
   margin: 0;
 }
 header .aside-section ul li {
-  color: white;
+  color: #223441;
   list-style: none;
   font-size: 20px;
   text-align: center;
@@ -196,22 +201,16 @@ header .aside-section ul li {
   padding: 10px 0;
 }
 header .aside-section ul li:hover {
-  color: #223441;
+  color: #4db0e1;
 }
 header .overlay {
   width: 100%;
   height: 100vh;
   background-color: rgba(0, 0, 0, 0.5);
   position: fixed;
-  display: none;
   top: 0;
   z-index: 1;
   opacity: 0;
-  transition: 0.4s ease-in-out opacity;
-}
-header .overlay.active {
-  opacity: 1;
-  display: block;
 }
 header .header {
   position: relative;
@@ -239,6 +238,8 @@ header .header .content .bord {
 header .header .content .txt {
   color: white;
   padding-top: 100px;
+  position: relative;
+  z-index: 1;
 }
 header .header .content .txt h1 {
   font-weight: bolder;
@@ -281,6 +282,9 @@ header .header .content .img img {
     padding: 0 0 150px 0;
     width: 47%;
   }
+  header .header .content .txt h1 {
+    font-size: 37px;
+  }
   header .header .content .img {
     width: 53%;
   }
@@ -310,7 +314,8 @@ header .header .content .img img {
 }
 @media (max-width: 420px) {
   header {
-    min-height: 900px;
+    min-height: 750px;
+    height: 750px;
   }
   header .header .content {
     margin-bottom: 60px;
@@ -319,10 +324,11 @@ header .header .content .img img {
     margin-bottom: 30px;
   }
   header .header .content .txt h1 {
-    font-size: 35px;
+    font-size: 27px;
   }
   header .header .content .txt p {
-    width: 100%;
+    width: 75%;
+    font-size: 12px;
   }
   header .header .content .img {
     width: 100%;
