@@ -16,7 +16,8 @@ header
                     .button.poppins
                         button.transitioned-color appointment
                 .hid-icon(data-section="aside-section", data-overlay="overlay")
-                    i(class="fas fa-virus transitioned-color")
+                    -for (let i = 0; i < 3; i++)
+                        .bar.transitioned-bg-color
 
     .aside-section(data-translate=".aside-section .wave")
         i(class="fas fa-heartbeat")

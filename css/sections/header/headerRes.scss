@@ -3,11 +3,12 @@
         nav {
             .row {
                 justify-content: space-between;
+                align-items: center;
                 .content {
                     display: none;
                 }
                 .hid-icon {
-                    display: block;
+                    display: flex;
                 }
             }
             
@@ -75,8 +76,8 @@
 
 @media (max-width:420px) {
     header {
-        min-height: 750px;
-        height: 750px;
+        min-height: 830px;
+        height: 830px;
         .header {
             .content {
                 margin-bottom: 60px;

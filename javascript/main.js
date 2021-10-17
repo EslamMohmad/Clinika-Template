@@ -105,3 +105,7 @@ function fadeEffect(effect, element, speed) {
         },speed)
     }
 }
+
+
+//get data to (about mid section)
+import "./data/data.js";

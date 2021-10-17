@@ -1,26 +1,86 @@
 .about {
-    .content {
-        display: flex;
-        .bord {
-            width: 50%;
-        }
-        .img {
-            height: 400px;
-        }
-        .txt {
-            padding-top: 60px;
-            h1, p {
-                margin-bottom: 40px;
+    .top {
+        margin-bottom: 250px;
+        .content {
+            display: flex;
+            .bord {
+                width: 50%;
             }
+            .img {
+                height: 400px;
+            }
+            .txt {
+                padding-top: 60px;
+                h1, p {
+                    margin-bottom: 40px;
+                }
+                h1 {
+                    font-family: "jost";
+                    font-weight: bolder;
+                    font-size: 33px;
+                    text-transform: none;
+                }
+                p {
+                    color:$gray-color;
+                    font-size: 15px;
+                }
+            }
+        }
+    }
+    .mid {
+        .content {
+            width:100%;
+            display: flex;
+            flex-direction: column;
             h1 {
-                font-family: "jost";
                 font-weight: bolder;
-                font-size: 33px;
+                font-size: 36px;
+                color: $black-color;
                 text-transform: none;
+                margin-bottom: 40px;
+                width: 50%;
             }
-            p {
-                color:$gray-color;
-                font-size: 15px;
+            .section {
+                display: flex;
+                .parent {
+                    width:50%
+                }
+                .txt {
+                    margin-right: 70px;
+                    .flexBox {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: space-between;
+                        align-content: space-between;
+                        min-height: 390px;
+                        .bord {
+                            width:45%;
+                            height: 45%;
+                            img {
+                                width: 60px;
+                                height: 70px;
+                                margin-bottom: 20px;
+                            }
+                            h3 {
+                                font-weight: bolder;
+                                text-transform: none;
+                                color: $black-color;
+                                font-size: 24px;
+                                &::first-letter {
+                                    text-transform: capitalize;
+                                }
+                            }
+                            p {
+                                color: $gray-color;
+                                font-size: 14px;
+                            }
+                        }
+                    }
+                }
+                .img {
+                    max-width: 100%;
+                    height: 100%;
+                }
             }
         }
     }
