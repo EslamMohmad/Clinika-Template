@@ -2,19 +2,22 @@ function AboutMidSec() {
     const XHR = new XMLHttpRequest();
     XHR.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
-            const aboutMidMidData = JSON.parse(this.responseText)["aboutTopMid"];
-            const aboutMidMidSec = document.querySelector(".about .mid .flexBox");
-            let contnet = "";
-            for (let i = 0; i < aboutMidMidData.length; i++) {
-                contnet += `
-                    <div class="bord">
-                        <img src=${aboutMidMidData[i]["icon"]} />
-                        <h3 class="jost">${aboutMidMidData[i]["h3"]}</h3>
-                        <p>${aboutMidMidData[i]["p"]}</p>
-                    </div>
-                ` 
+            const getData = (element, targetData) => {
+                const myData = JSON.parse(this.responseText)[targetData]
+                const targetSection = document.querySelector(element)
+                let content = "";
+                for (let i = 0; i < myData.length; i++) {
+                    content += `
+                        <div class="bord">
+                            <img src=${myData[i]["img"]} />
+                            <h3>${myData[i]["h3"]}</h3>
+                            <p>${myData[i]["p"]}</p>
+                        </div>
+                    `
+                }
+                targetSection.innerHTML = content
             }
-            aboutMidMidSec.innerHTML = contnet;
+            getData(".about .mid .flexBox","aboutMid");
         }
     }
 

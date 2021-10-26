@@ -24,3 +24,36 @@
                         .parent.img
                             img(src="images/about/Clinika-right-img.png")
     //bot article
+    .bot
+        .container
+            .row
+                .content    
+                    h1.jost Specialities available at Clinika
+                    p Donec pulvinar, eros quis convallis vestibulum, neque turpis iaculis mi, in ultrices nisl magna ut leo.
+                    .flexContent
+                        .flexIcons
+                            -const paragArr = ["Cardiology","Stomatology","Radiology","Neurology","Ophthalmology"]
+                            .icon.active(data-article=paragArr[0])
+                                img(src=`images/about/icon1.png`)
+                                p= paragArr[0]
+                            -for (let i = 1; i <= paragArr.length - 1; i++)
+                                .icon(data-article=paragArr[i])
+                                    img(src=`images/about/icon${i + 1}.png`)
+                                    p= paragArr[i]
+                        .flexBox
+                            -const loremTxt = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras non leo nunc. Vivamus lacinia massa nec sem sagittis, quis consequat augue rhoncus. Phasellus varius quam quis ligula congue, eu aliquam eros feugiat. Integer bibendum mauris euismod ex cursus, in facilisis."
+                            .bord.active(class=paragArr[0])
+                                .img
+                                    img(src=`images/about/img${1}.png`)
+                                .txt
+                                    h3.jost= paragArr[0]
+                                    p= loremTxt
+                                    button.main-btn.transitioned-bg-color view speciality
+                            -for (let i = 1; i <= paragArr.length - 1; i++)
+                                .bord(class=paragArr[i])
+                                    .img
+                                        img(src=`images/about/img${i + 1}.png`)
+                                    .txt
+                                        h3.jost= paragArr[i-1]
+                                        p= loremTxt
+                                        button.main-btn.transitioned-bg-color view speciality

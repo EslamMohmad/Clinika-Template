@@ -1,6 +1,8 @@
 .about {
-    .top {
+    > div:not(:last-child) {
         margin-bottom: 250px;
+    }
+    .top {
         .content {
             display: flex;
             .bord {
@@ -19,6 +21,7 @@
                     font-weight: bolder;
                     font-size: 33px;
                     text-transform: none;
+                    color: $black-color;
                 }
                 p {
                     color:$gray-color;
@@ -82,6 +85,112 @@
                     height: 100%;
                 }
             }
+        }
+    }
+    .bot {
+        .content {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            h1 {
+                font-size: 50px;
+                font-weight: bolder;
+                text-transform: none;
+                color:$black-color;
+                margin-bottom: 15px;
+            }
+            > p {
+                width: 50%;
+                text-align: center;
+                color: $gray-color;
+            }
+            .flexContent {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                .flexIcons {
+                    margin: 50px 0;
+                    display: flex;
+                    width: 100%;
+                    $height:50px;
+                    border-radius:10px;
+                    overflow: hidden;
+                    .icon {
+                        width: (100% / 5);
+                        height: ($height * 3);
+                        border:1px solid #e3e3e3;
+                        padding-top: ($height / 1.5);
+                        cursor: pointer;
+                        img {
+                            width: 50px;
+                            height: $height;
+                            margin: 0 auto;
+                            margin-bottom: 20px;
+                            display: block;
+                        }
+                        p {
+                            text-align: center;
+                            margin: 0;
+                            font-weight: bolder;
+                            font-size: 16px;
+                            color: $lightBlue-color;
+                        }
+                        &:nth-of-type(1) {
+                            img {
+                                width: 40px;
+                                height: 55px;
+                            }
+                        }
+                    }
+                    .icon.active {
+                        background-image: linear-gradient(90deg,$darkBlue-color ,$lightBlue-color);
+                        border:none;
+                        img {
+                            filter: brightness(0) invert(1);
+                        }
+                        p {
+                            color: white;
+                        }
+                    }
+                }
+                .flexBox{
+                    position: relative;
+                    width: 100%;
+                    height: 370px;
+                    .bord {
+                        width: 100%;
+                        height: 100%;
+                        position: absolute;
+                        background-color: white;
+                        display: flex;
+                        justify-content: space-between;
+                        display: none;
+                        .txt {
+                            width: 60%;
+                            align-self: center;
+                            margin-left: 60px;
+                            h3,p {
+                                margin-bottom: 30px;
+                            }
+                            h3 {
+                                font-weight: bolder;
+                                color: $black-color;
+                                font-size:28px;
+                            }
+                            p {
+                                color: $gray-color;
+                                font-size: 16px;
+                            }
+    
+                        }
+                    }
+                    .bord.active {
+                        display: flex;
+                    }
+                }
+            }
+            
         }
     }
 }

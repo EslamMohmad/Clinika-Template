@@ -72,11 +72,7 @@ window.onscroll = function () {
 function fadeEffect(effect, element, speed) {
     const targetElement = document.querySelector(element);
     const style = window.getComputedStyle(targetElement).getPropertyValue("opacity");
-    if (effect == "fadeIn") {
-        fadeIn()
-    } else if (effect == "fadeOut") {
-        fadeOut()
-    }
+    effect == "fadeIn" ? fadeIn() : fadeOut()
     let opacityVal = Number(style);
     //fadeIn
     function fadeIn() {
@@ -109,3 +105,21 @@ function fadeEffect(effect, element, speed) {
 
 //get data to (about mid section)
 import "./data/data.js";
+
+//click on about bot icons section
+const flexIcons = document.querySelectorAll(".about .bot .flexIcons .icon");
+const aboutBotBox = document.querySelectorAll(".about .bot .flexBox .bord");
+flexIcons.forEach((ele,ind,arr) => {
+    ele.onclick = function () {
+        for (let i = 0; i < arr.length; i++) {
+            arr[i].classList.remove("active");
+            aboutBotBox[i].classList.remove("active")
+        }
+        ele.classList.add("active")
+
+        let eleData = ele.getAttribute("data-article");
+        let article = document.querySelector(".about .bot .flexBox ." + eleData);
+        
+        article.classList.add("active")
+    }
+})

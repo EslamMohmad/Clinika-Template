@@ -1,26 +1,26 @@
 {
-    "aboutTopMid":
+    "aboutMid":
     [
         {
-            "icon":"images/about/Clinka-service-1.png",
+            "img":"images/about/Clinka-service-1.png",
             "h3":"all medical facility",
             "p":"entreaties unpleasant sufficient few pianoforte discovered."
         }
         ,
         {
-            "icon":"images/about/Clinka-service-2.png",
+            "img":"images/about/Clinka-service-2.png",
             "h3":"lowest fees in city",
             "p":"may find some redeeming value with wait for it, dummy copy."
         }
         ,
         {
-            "icon":"images/about/Clinka-service-3.png",
+            "img":"images/about/Clinka-service-3.png",
             "h3":"experienced Doctor",
             "p":"a client that’s unhappy for ants reason is problem is worse."
         }
         ,
         {
-            "icon":"images/about/Clinka-service-4.png",
+            "img":"images/about/Clinka-service-4.png",
             "h3":"5000+ happy Patient",
             "p":"Even if your less into design and more in content strategy."
         }
