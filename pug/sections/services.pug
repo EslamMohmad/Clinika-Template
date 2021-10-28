@@ -1,0 +1,21 @@
+.services.cover
+    .wave.head.cover
+    .wave.foot.cover
+    .floatImg
+    .container
+        .row
+            .content
+                .txt
+                    h3.jost Services Provided By Clinika
+                    p A team of expert doctors that are leading our clinic! Meet our staff
+                        <br/> and visit us for your next problem!
+                .flexBox
+                    -const headTxt = ["blood tests", "teeth whitening", "STD examination"]
+                    -const bordArr = ["Bring to the table win-win survival strategies to ...", "Capitalize on low hanging fruit to identify a ...", "Taking seamless key indicators to the long tail. ..."]
+                    -for (let i = 1; i <= headTxt.length; i++)
+                        .bord
+                            .img
+                                img(src="images/services/img"+i+".png")
+                            h3.jost.transitioned-color= headTxt[i - 1]
+                            p= bordArr[i - 1]
+                .button.main-btn.transitioned-bg-color view all services

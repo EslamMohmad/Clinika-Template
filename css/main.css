@@ -29,6 +29,8 @@
   color: white;
   text-transform: capitalize;
   letter-spacing: 0.3px;
+  cursor: pointer;
+  font-weight: bold;
 }
 .main-btn:hover {
   background-color: #4db0e1;
@@ -731,7 +733,7 @@ header .header .content .img img {
     display: none;
   }
   .about .bot .content .flexContent .flexBox {
-    min-height: 600px;
+    min-height: 650px;
     width: 100%;
   }
   .about .bot .content .flexContent .flexBox .bord .img {
@@ -766,5 +768,184 @@ header .header .content .img img {
   }
   .about .bot .content .flexContent .flexBox {
     min-height: 550px;
+  }
+}
+.services {
+  position: relative;
+  height: 1300px;
+  background-image: url(../images/services/services.jpg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+.services .wave {
+  position: absolute;
+  background-image: url(../images/services/wave.png);
+  width: 100%;
+  height: 300px;
+  background-position: center;
+}
+.services .wave.head {
+  top: 0;
+}
+.services .wave.foot {
+  bottom: 0;
+  transform: rotateZ(180deg);
+}
+.services .floatImg {
+  position: absolute;
+  top: 23%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-image: url(../images/services/txt.png);
+  background-size: cover;
+  width: 605px;
+  height: 130px;
+}
+.services .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 60px;
+  width: 100%;
+  min-height: 500px;
+}
+.services .content .txt {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.services .content .txt h3 {
+  font-weight: bolder;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+.services .content .txt p {
+  font-weight: 400;
+  font-size: 16px;
+}
+.services .content .flexBox {
+  display: flex;
+  justify-content: space-between;
+  height: 280px;
+  width: 100%;
+  margin-bottom: 50px;
+}
+.services .content .flexBox .bord {
+  width: 31.3333333333%;
+  height: 100%;
+  background-color: white;
+  border-radius: 20px;
+  color: #223441;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.services .content .flexBox .bord .img, .services .content .flexBox .bord h3 {
+  margin-bottom: 10px;
+}
+.services .content .flexBox .bord .img {
+  width: 100px;
+  height: 100px;
+  transition: 0.2s ease-in-out transform;
+  margin-bottom: 25px;
+}
+.services .content .flexBox .bord h3 {
+  font-weight: bolder;
+  font-size: 23px;
+}
+.services .content .flexBox .bord p {
+  width: 70%;
+  text-align: center;
+  color: #777777;
+  text-transform: none;
+  margin: 0;
+}
+.services .content .flexBox .bord:hover .img {
+  transform: scale(1.1);
+}
+.services .content .flexBox .bord:hover h3 {
+  color: #4db0e1;
+}
+
+@media (max-width: 992px) {
+  .services .content .flexBox {
+    max-height: 230px;
+  }
+  .services .content .flexBox .bord .img {
+    width: 70px;
+    height: 70px;
+  }
+  .services .content .flexBox .bord h3 {
+    font-size: 20px;
+  }
+  .services .content .flexBox .bord p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .services {
+    min-height: 1300px;
+    height: auto;
+  }
+  .services .floatImg {
+    width: 420px;
+    height: 90px;
+    top: 18.5%;
+  }
+  .services .wave {
+    height: 200px;
+  }
+  .services .content {
+    margin-top: 95px;
+  }
+  .services .content .flexBox {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    max-height: none;
+    height: 500px;
+  }
+  .services .content .flexBox .bord {
+    width: 45%;
+    height: 45%;
+  }
+  .services .content .flexBox .bord:first-child {
+    margin-right: 30px;
+  }
+}
+@media (max-width: 576px) {
+  .services {
+    min-height: 1400px;
+  }
+  .services .floatImg {
+    top: 11%;
+    width: 245px;
+    height: 53px;
+  }
+  .services .wave {
+    height: 100px;
+  }
+  .services .content .txt h3 {
+    font-size: 23px;
+  }
+  .services .content .txt p {
+    font-size: 12px;
+  }
+  .services .content .flexBox {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    height: auto;
+  }
+  .services .content .flexBox .bord {
+    width: 100%;
+    height: 250px;
+  }
+  .services .content .flexBox .bord:first-child {
+    margin: 0;
+  }
+  .services .content .flexBox .bord:not(:last-child) {
+    margin-bottom: 20px;
   }
 }

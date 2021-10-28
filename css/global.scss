@@ -35,6 +35,8 @@ $gray-color:#777777;
     color: white;
     text-transform: capitalize;
     letter-spacing: 0.3px;
+    cursor: pointer;
+    font-weight: bold;
     &:hover {
         background-color: $lightBlue-color;
     }
