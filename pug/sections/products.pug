@@ -1,0 +1,31 @@
+.products
+    .container
+        .row
+            .content
+                .txt
+                    h2.jost Handpicked Products For You
+                .flexBox
+                    -const proTxt = ["clean eyes", "finest nutrition", "air optix", "lens solution", "travel hand wipes", "anti dust mask"]
+                    -for (let i = 0; i < proTxt.length; i++)
+                        .bord
+                            .img
+                                img(src="images/products/img"+(i + 1)+".jpg")
+                            .floatIcon.absolute
+                                ul
+                                    li
+                                        span purchase
+                                        i(class="fas fa-cash-register transitioned-color")
+                                    li
+                                        span add to whishlist
+                                        i(class="far fa-heart transitioned-color")
+                                    li
+                                        span quickview
+                                        i(class="far fa-eye transitioned-color")
+                            .txt
+                                .prize
+                                    h3= proTxt[i] 
+                                        <br/>
+                                        span $21.00
+                                .stars
+                                    -for (let s = 1; s <= 5; s++)
+                                        i(class="fas fa-star")

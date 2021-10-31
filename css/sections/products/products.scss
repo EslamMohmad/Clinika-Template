@@ -1,0 +1,108 @@
+.products {
+    .content {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        > .txt {
+            margin-bottom: 80px;
+            h2 {
+                margin:0;
+                font-weight: bolder;
+                color:$black-color;
+                font-size: 35px;
+            }
+        }
+        .flexBox {
+            display: flex;
+            justify-content: space-between;
+            align-content: space-between;
+            flex-wrap: wrap;
+            gap: 60px 15px;
+            .bord {
+                width: (100% / 3) - 1;
+                position: relative;
+                .img {
+                    height: 400px;
+                    img {
+                        transition: 0.3s ease-in-out transform;
+                    }
+                }
+                .absolute {
+                    position: absolute;
+                }
+                .floatIcon {
+                    right: 20px;
+                    top:20px;
+                    display: flex;
+                    flex-direction: column;
+                    ul {
+                        margin: 0;
+                        li {
+                            span {
+                                position: absolute;
+                                width: 120px;
+                                background-color: rgba(0, 0, 0,0.7);
+                                color: white;
+                                left: -130px;
+                                border-radius:10px ;
+                                text-align: center;
+                                font-size: 12px;
+                                padding: 2.5px 0;
+                                opacity: 0;
+                                transition: 0.2s linear opacity;
+                            }
+                            list-style: none;
+                            &:not(:last-child) {
+                                margin-bottom: 20px;
+                            }
+                            &:hover i{
+                                color:$lightBlue-color
+                            }
+                            i {
+                                font-size: 18px;
+                                cursor: pointer;
+                            }
+                            &:hover span {
+                                opacity: 1;
+                            }
+                        }
+                    }
+                }
+                .txt {
+                        display: flex;
+                        justify-content: space-between;
+                        align-items:center;
+                        padding: 10px 30px;
+                        position: relative;
+                    .prize {
+                        height: 20%;
+                    h3 {
+                        font-size: 20px;
+                        color:$black-color;
+                        margin: 0;
+                        span {
+                            display: block;
+                            margin-top: 5px;
+                        }
+                    }
+                    }
+                    .stars {
+                        position: absolute;
+                        right: 0;
+                        bottom: 10px;
+                        i {
+                            color: $darkBlue-color;
+                        }
+                    }
+                }
+                &:hover .img img {
+                    transform: scale(1.05);
+                }
+            }
+        }
+    }
+}
+
+//import responsive file
+@import "productsRes";
