@@ -1,0 +1,24 @@
+.review
+    .container
+        .row
+            .content
+                .txt
+                    h1.jost Thoughts from our best pacient’s experience
+                    p Seeking for verbal of our service quality? Find them here. Everything is transparent and straightforward for your sense of jusitifcation.
+                    button.main-btn.transitioned-bg-color view all reviews
+                .slider
+                    -
+                        const headerRevTxt = ["Clinika Doctors work hard to ensure quality.","Best Doctor Patient communication I had.","Great Doctors and a good Front Desk service.","Clinika quality services fully satisfied my needs."]
+                        const paraTxt = "Vivamus vel fringilla est. Fusce fermentum, quam a aliquet semper, eros sapien ullamcorper ligula, quis ornare elit sem at sem. Ut efficitur diam arcu id."
+                        const pacientName = ["Mask Stevens", "Andrew Jackson", "Ella Lopez", "Madison Smith"]
+                    -for (let i = 0; i < headerRevTxt.length; i++)
+                        .bord
+                            h3.jost= headerRevTxt[i]
+                            p= paraTxt
+                            .flex
+                                .img
+                                    img(src="images/review/img"+(i + 1)+".jpg")
+                                .name
+                                    h2.jost= pacientName[i]
+                                    span pacient
+                            

@@ -1,0 +1,64 @@
+@media (max-width:992px) {
+    .review {
+        margin-top: 200px;
+        .row {
+            justify-content: center;
+        }
+        .content {
+            width: 90%;
+            .txt {
+                h1 {
+                    font-size: 25px;
+                }
+                p {
+                    font-size: 14px;
+                }
+            }
+            .slider {
+                .bord {
+                    p {
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .review {
+        margin-top: 100px;
+        .content {
+            width: 100%;
+            flex-direction: column;
+            > div {
+                width: 100%;
+                &:not(:last-child) {
+                    margin-bottom: 50px;
+                }
+            }
+            .txt {
+                padding: 0;
+                p {
+                    width: 100%;
+                }
+            }
+            .slider {
+                perspective: 600px;
+                .bord {
+                    p {
+                        width: 100%;
+                    }
+                    transform: scale(.5);
+                    opacity: 0;
+                    transition: 0.5s ease-in-out ;
+                    transition-property: transform, opacity;
+                }
+                .slick-current {
+                    transform: scale(1);
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}

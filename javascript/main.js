@@ -125,23 +125,4 @@ flexIcons.forEach((ele,ind,arr) => {
 })
 
 //when width is less than 576px add slick.js class
-if (window.innerWidth <= 576) {
-    $(".products .flexBox").slick({
-        arrows:false,
-        responsive: [
-            {
-                breakpoint : 1920,
-                settings : "unslick"
-            }
-            ,
-            {
-                breakpoint : 576,
-                settings : {
-                    slidesToShow:1,
-                    slidesToScroll:1,
-                    infinite:true
-                }
-            }
-        ]
-    })
-}
+import "./slider/slider.js"

@@ -1052,6 +1052,9 @@ header .header .content .img img {
 .products .content .flexBox .bord:hover .img img {
   transform: scale(1.05);
 }
+.products .content button {
+  margin-top: 80px;
+}
 
 @media (max-width: 1200px) {
   .products .content .flexBox {
@@ -1117,9 +1120,160 @@ header .header .content .img img {
   .products .content .flexBox .slick-list .slick-track .bord .img {
     height: 370px;
   }
+  .products .content .flexBox .slick-list .slick-track .bord .txt {
+    padding: 10px 0;
+  }
 }
 @media (max-width: 420px) {
   .products .content .flexBox .slick-list .slick-track .bord .img {
     height: 240px;
+  }
+}
+.review {
+  margin-top: 300px;
+}
+.review .content {
+  display: flex;
+  width: 100%;
+}
+.review .content > div {
+  width: 50%;
+}
+.review .content .txt {
+  padding-right: 50px;
+}
+.review .content .txt h1 {
+  font-weight: bolder;
+  text-transform: none;
+  font-size: 35px;
+}
+.review .content .txt p {
+  width: 85%;
+  color: #777777;
+  margin-bottom: 30px;
+}
+.review .content .slider {
+  overflow: hidden;
+}
+.review .content .slider .slick-list .slick-track {
+  display: flex;
+  width: 100%;
+}
+.review .content .slider .bord h3 {
+  font-size: 20px;
+  font-weight: bolder;
+  text-transform: none;
+}
+.review .content .slider .bord p {
+  color: #777777;
+  width: 90%;
+}
+.review .content .slider .bord .flex {
+  display: flex;
+}
+.review .content .slider .bord .flex .img {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  overflow: hidden;
+  margin-right: 20px;
+}
+.review .content .slider .bord .flex .name {
+  margin-top: 8px;
+}
+.review .content .slider .bord .flex .name h2 {
+  font-size: 19px;
+  font-weight: bolder;
+  margin-bottom: 1px;
+}
+.review .content .slider .bord:hover {
+  cursor: grab;
+}
+.review .content .slider .bord:active {
+  cursor: grabbing;
+}
+.review .content .slider .slick-dots {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  padding: 50px 0;
+}
+.review .content .slider .slick-dots button {
+  display: none;
+}
+.review .content .slider .slick-dots li {
+  width: 12px;
+  height: 12px;
+  background-color: #d4d4d4;
+  border-radius: 50%;
+  list-style: none;
+  cursor: pointer;
+  transition: 0.1s linear background-color;
+}
+.review .content .slider .slick-dots li:not(:last-child) {
+  margin-right: 15px;
+}
+.review .content .slider .slick-dots li:hover {
+  background-color: #afafaf;
+}
+.review .content .slider .slick-dots li.slick-active {
+  background-color: #4db0e1;
+}
+
+@media (max-width: 992px) {
+  .review {
+    margin-top: 200px;
+  }
+  .review .row {
+    justify-content: center;
+  }
+  .review .content {
+    width: 90%;
+  }
+  .review .content .txt h1 {
+    font-size: 25px;
+  }
+  .review .content .txt p {
+    font-size: 14px;
+  }
+  .review .content .slider .bord p {
+    font-size: 14px;
+  }
+}
+@media (max-width: 768px) {
+  .review {
+    margin-top: 100px;
+  }
+  .review .content {
+    width: 100%;
+    flex-direction: column;
+  }
+  .review .content > div {
+    width: 100%;
+  }
+  .review .content > div:not(:last-child) {
+    margin-bottom: 50px;
+  }
+  .review .content .txt {
+    padding: 0;
+  }
+  .review .content .txt p {
+    width: 100%;
+  }
+  .review .content .slider {
+    perspective: 600px;
+  }
+  .review .content .slider .bord {
+    transform: scale(0.5);
+    opacity: 0;
+    transition: 0.5s ease-in-out;
+    transition-property: transform, opacity;
+  }
+  .review .content .slider .bord p {
+    width: 100%;
+  }
+  .review .content .slider .slick-current {
+    transform: scale(1);
+    opacity: 1;
   }
 }

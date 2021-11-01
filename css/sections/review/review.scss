@@ -1,0 +1,97 @@
+.review {
+    margin-top: 300px;
+    .content {
+        display: flex;
+        width: 100%;
+        > div {
+            width: 50%;
+        }
+        .txt {
+            padding-right: 50px;
+            h1 {
+                font-weight: bolder;
+                text-transform: none;
+                font-size: 35px;
+            }
+            p {
+                width: 85%;
+                color: $gray-color;
+                margin-bottom: 30px;
+            }
+        }
+        .slider {
+            overflow: hidden;
+            .slick-list{
+                .slick-track {
+                    display: flex;
+                    width: 100%;
+                }
+            }
+            .bord {
+                h3 {
+                    font-size: 20px;
+                    font-weight: bolder;
+                    text-transform: none;
+                }
+                p {
+                    color:$gray-color;
+                    width: 90%;
+                }
+                .flex {
+                    display: flex;
+                    .img {
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                        margin-right: 20px;
+                    }
+                    .name {
+                        margin-top: 8px;
+                        h2 {
+                            font-size: 19px;
+                            font-weight: bolder;
+                            margin-bottom: 1px;
+                        }
+                    }
+                }
+                &:hover {
+                    cursor: grab;
+                }
+                &:active {
+                    cursor:grabbing 
+                }
+            }
+            .slick-dots {
+                margin: 0;
+                display: flex;
+                justify-content: center;
+                padding: 50px 0;
+                button {
+                    display: none;
+                }
+                li {
+                    width: 12px;
+                    height: 12px;
+                    background-color: #d4d4d4;
+                    border-radius: 50%;
+                    list-style: none;
+                    cursor: pointer;
+                    transition:0.1s linear background-color;
+                    &:not(:last-child) {
+                        margin-right: 15px;
+                    }
+                    &:hover {
+                        background-color: #afafaf;
+                    }
+                }
+                li.slick-active {
+                    background-color: $lightBlue-color;
+                }
+            }
+        }
+    }
+}
+
+//import responsive file
+@import "reviewRes";
