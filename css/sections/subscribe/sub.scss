@@ -16,11 +16,11 @@
         background-size: cover;
     }
     .top {
-        top:0;
+        top:-1px;
         background-image: url(../images/subscribe/wave-1.png);
     }
     .bot {
-        bottom: 0;
+        bottom: -1px;
         background-image: url(../images/subscribe/wave-2.png);
     }
     .floating-txt {

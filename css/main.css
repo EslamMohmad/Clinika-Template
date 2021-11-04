@@ -1402,11 +1402,11 @@ header .header .content .img img {
   background-size: cover;
 }
 .subscribe .top {
-  top: 0;
+  top: -1px;
   background-image: url(../images/subscribe/wave-1.png);
 }
 .subscribe .bot {
-  bottom: 0;
+  bottom: -1px;
   background-image: url(../images/subscribe/wave-2.png);
 }
 .subscribe .floating-txt {
