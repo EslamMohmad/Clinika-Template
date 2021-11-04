@@ -8,9 +8,6 @@
             .bord {
                 width: 50%;
             }
-            .img {
-                height: 400px;
-            }
             .txt {
                 padding-top: 60px;
                 h1, p {
@@ -45,23 +42,24 @@
             }
             .section {
                 display: flex;
+                justify-content: space-between;
                 .parent {
-                    width:50%
+                    width:50%;
+                    height: auto;
                 }
                 .txt {
-                    margin-right: 70px;
                     .flexBox {
                         display: flex;
                         flex-wrap: wrap;
                         justify-content: space-between;
                         align-content: space-between;
                         min-height: 390px;
+                        gap:0 30px;
                         .bord {
                             width:45%;
                             height: 45%;
                             img {
                                 width: 60px;
-                                height: 70px;
                                 margin-bottom: 20px;
                             }
                             h3 {
@@ -79,10 +77,6 @@
                             }
                         }
                     }
-                }
-                .img {
-                    max-width: 100%;
-                    height: 100%;
                 }
             }
         }
@@ -120,13 +114,13 @@
                         width: (100% / 5);
                         height: ($height * 3);
                         border:1px solid #e3e3e3;
-                        padding-top: ($height / 1.5);
+                        padding: ($height / 1.5) 0;
                         cursor: pointer;
                         img {
                             width: 50px;
-                            height: $height;
+                            height:auto;
                             margin: 0 auto;
-                            margin-bottom: 20px;
+                            margin-bottom: 14px;
                             display: block;
                         }
                         p {
@@ -137,9 +131,11 @@
                             color: $lightBlue-color;
                         }
                         &:nth-of-type(1) {
+                            padding: 28px 0;
                             img {
                                 width: 40px;
                                 height: 55px;
+                                margin-bottom: 15px;
                             }
                         }
                     }
@@ -157,11 +153,9 @@
                 .flexBox{
                     position: relative;
                     width: 100%;
-                    height: 370px;
                     .bord {
                         width: 100%;
                         height: 100%;
-                        position: absolute;
                         background-color: white;
                         display: flex;
                         justify-content: space-between;
@@ -169,7 +163,6 @@
                         .txt {
                             width: 60%;
                             align-self: center;
-                            margin-left: 60px;
                             h3,p {
                                 margin-bottom: 30px;
                             }
@@ -183,6 +176,9 @@
                                 font-size: 16px;
                             }
     
+                        }
+                        .img {
+                            width: 30%;
                         }
                     }
                     .bord.active {

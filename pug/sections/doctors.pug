@@ -1,0 +1,22 @@
+.doctor
+    .container
+        .row
+            .content
+                .txt
+                    h1.jost Our experienced doctors
+                    p A team of expert doctors that are leading our clinic! Meet our staff and visit us for your next problem!
+                .slider
+                    -
+                        const docName = ["Jimmy Larsen", "Antonio Irving", "Antonio Irving", "Aisha Mays", "Paul Andrews"]
+                        const jopName = ["Cardiologist", "Orthodontist", "Surgeon", "Pediatrist", "Oncologist"]
+                    -for (let i = 0; i < docName.length; i++)
+                        .bord
+                            .img
+                                img(src="images/doctors/img"+(i + 1)+".jpg")
+                            .txt
+                                h3= "Dr " + docName[i]
+                                p= jopName[i]
+                            .floatingIcons
+                                i(class="far fa-envelope transitioned-color")
+                                i(class="fab fa-facebook-f transitioned-color")
+                                i(class="fab fa-linkedin-in transitioned-color")

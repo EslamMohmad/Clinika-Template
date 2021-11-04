@@ -1,0 +1,93 @@
+.doctor {
+    margin-top: 300px;
+    .content {
+        width: 100%;
+        > .txt {
+            text-align: center;
+            margin-bottom: 80px;
+            h1 {
+                font-size: 35px;
+                font-weight: bolder;
+                text-transform: none;
+                color:$black-color;
+                margin-bottom: 20px;
+            }
+            p {
+                width: 45%;
+                margin: auto;
+                color: $gray-color;
+            }
+        }
+        .slider {
+            display: flex;
+            justify-content:center;
+            align-items: center;
+            .slick-list {
+                overflow: hidden;
+                width: 80%;
+                .slick-track {
+                    display: flex;
+                }
+            }
+            .bord {
+                position: relative;
+                &:not(:last-child) {
+                    margin-right: 20px;
+                }
+                .txt {
+                    padding:15px 10px;
+                    h3 {
+                        font-size: 21px;
+                        font-weight: bolder;
+                        color:$black-color
+                    }
+                    p {
+                        color:$lightBlue-color;
+                        text-align: center;
+                    }
+                }
+                .floatingIcons {
+                    position: absolute;
+                    bottom: 40%;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    padding:10px 15px;
+                    border-radius: 30px;
+                    background-color: white;
+                    opacity: 0;
+                    transition: 0.2s linear opacity;
+                    i {
+                        cursor: pointer;
+                        &:hover {
+                            color:$lightBlue-color;
+                        }
+                        &:not(:last-child) {
+                            margin-right: 15px;
+                        }
+                    }
+                }
+                &:hover .floatingIcons {
+                    opacity: 1;
+                }
+            }
+            .slick-arrow {
+                width: 50px;
+                height: 50px;
+                line-height: 50px;
+                text-align: center;
+                border-radius:50%;
+                cursor: pointer;
+                color:white;
+                background-color: $darkBlue-color;
+                transition: 0.2s ease background-color;
+                margin: 0 20px;
+                &:hover {
+                    background-color: $lightBlue-color;
+                }
+            }
+        }
+    }
+}
+
+//import responsive file
+@import "doctorRes";

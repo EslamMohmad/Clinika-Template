@@ -1,0 +1,40 @@
+@media (max-width:992px) {
+    .doctor {
+        margin-top: 200px;
+        .content {
+            > .txt p {
+                width: 70%;
+            }
+            .slider {
+                .slick-list .slick-track {
+                    gap: 0 50px;
+                }
+                .bord {
+                    &:not(:last-child) {
+                        margin-right: auto;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    .doctor {
+        margin-top: 100px;
+        .content .slider .slick-list {
+            width: 60%;
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .doctor .content {
+        > .txt h1 {
+            font-size: 24px;
+        }
+        .slider .slick-list {
+            width: 80%;
+        }
+    }
+}

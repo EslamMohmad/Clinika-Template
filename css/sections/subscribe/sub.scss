@@ -1,0 +1,70 @@
+.subscribe {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 1000px;
+    background-image: url(../images/subscribe/subscribe.jpg);
+    background-position: center;
+    position: relative;
+    color: white;
+    .wave {
+        height: 300px;
+        width: 100%;
+        position: absolute;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+    }
+    .top {
+        top:0;
+        background-image: url(../images/subscribe/wave-1.png);
+    }
+    .bot {
+        bottom: 0;
+        background-image: url(../images/subscribe/wave-2.png);
+    }
+    .floating-txt {
+        position: absolute;
+        background-image: url(../images/subscribe/txt.png);
+        width: 550px;
+        height: 100px;
+        top:33%
+    }
+    .content {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        width: 100%;
+        h3 {
+            font-weight: bolder;
+            font-size: 35px;
+            text-align: center;
+        }
+        p {
+            width: 45%;
+            text-align: center;
+            font-size: 16px;
+        }
+        form {
+            position: relative;
+            margin-top: 15px;
+            width: 55%;
+            input {
+                width: 100%;
+                padding: 22px 140px 22px 20px;
+                border-radius: 35px;
+                border: none;
+                outline: none;
+            }
+            button {
+                position: absolute;
+                right: 8px;
+                top:50%;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
+
+//import responsive file
+@import "subRes";

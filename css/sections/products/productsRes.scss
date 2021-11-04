@@ -3,9 +3,6 @@
         gap: 60px 14px;
         .bord {
             width: 30%;
-            .img {
-                height: 350px;
-            }
         }
     }
 }
@@ -14,9 +11,6 @@
     .products .content .flexBox {
         width: 90%;
         .bord {
-            .img {
-                height: 240px;
-            }
             .txt {
                 .prize h3 {
                     font-size: 17px;
@@ -64,7 +58,7 @@
             }
         }
         .flexBox {
-            width: 90%;
+            width: 80%;
             display: block;
             .slick-list {
                 width: 100%;
@@ -73,9 +67,6 @@
                     display: flex;
                     .bord {
                         margin: 0 20px;
-                        .img {
-                            height: 370px;
-                        }
                         .txt {
                             padding: 10px 0;
                         }
@@ -83,11 +74,5 @@
                 }
             }
         }
-    }
-}
-
-@media (max-width:420px) {
-    .products .content .flexBox .slick-list .slick-track .bord .img {
-        height: 240px;
     }
 }

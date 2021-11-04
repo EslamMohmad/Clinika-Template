@@ -1,0 +1,49 @@
+@media (max-width:992px) {
+    .subscribe {
+        .content {
+            p {
+                width: 55%;
+            }
+            form {
+                width: 60%;
+            }
+        }
+    }
+}
+
+@media (max-width:767px) {
+    .subscribe {
+        height: 800px;
+        .wave {
+            height: 100px;
+        }
+        .content {
+            form {
+                width: 90%;
+            }
+        }
+        .floating-txt {
+            top:28%;
+            width: 435px;
+            height: 70px;
+        }
+    }
+}
+
+@media (max-width:576px) {
+    .subscribe {
+        .content {
+            h3 {
+                font-size: 23px;
+            }
+            p {
+                width: 100%;
+            }
+        }
+        .floating-txt {
+            width: 280px;
+            height: 45px;
+            top: 32%;
+        }
+    }
+}

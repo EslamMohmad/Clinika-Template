@@ -23,7 +23,7 @@
                 width: (100% / 3) - 1;
                 position: relative;
                 .img {
-                    height: 400px;
+                    height: auto;
                     img {
                         transition: 0.3s ease-in-out transform;
                     }

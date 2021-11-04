@@ -7,7 +7,6 @@
                 }
                 .section {
                     .img {
-                        max-height: 400px;
                         width: 40%;
                     }
                 }
@@ -22,7 +21,6 @@
             .content {
                 .img {
                     width: 50%;
-                    height: 300px;
                 }
                 .txt {
                     h1 {
@@ -38,7 +36,6 @@
                     width: 90%;
                 }
                 .section {
-                    justify-content: space-between;
                     .txt {
                         width: 40%;
                         margin: 0;
@@ -54,8 +51,7 @@
                         }
                     }
                     .img {
-                        width: auto;
-                        max-height: 450px;
+                        width: 55%;
                         align-self: center;
                     }
                 }
@@ -72,11 +68,10 @@
                     .flexIcons {
                         $height:120px;
                         .icon {
-                            height: $height;
-                            padding-top: $height / 6;
+                            height: auto;
+                            padding: ($height / 6) 0;
                             img {
                                 width: 40px;
-                                height: 40px;
                                 margin-bottom: 15px;
                             }
                             p {
@@ -94,11 +89,11 @@
                     .flexBox {
                         .bord {
                             .img {
-                                max-height: 60%;
+                                width: 25%;
                             }
                             .txt {
                                 align-self: stretch;
-                                width: 70%;
+                                width: 65%;
                             }
                         }
                     }
@@ -122,8 +117,7 @@
                     width: 100%;
                 }
                 .img {
-                    height: 340px;
-                    width:400px;
+                    max-width:400px;
                     margin-bottom: 40px;
                 }
                 .txt {
@@ -139,7 +133,8 @@
                 .section {
                     flex-direction: column-reverse;
                     .img {
-                        width: 450px;
+                        max-width: 100%;
+                        width: 85%;
                         margin-bottom: 60px;
                     }
                     .txt {
@@ -179,7 +174,6 @@
                             align-items: center;
                             .img {
                                 width: 45%;
-                                height: auto;
                                 margin-bottom: 50px;
                             }
                             .txt {
@@ -241,10 +235,23 @@
                         max-width: none;
                         margin-bottom: 50px;
                         .icon {
-                            height: 80px;
                             width: (100% / 5);
+                            padding: 0;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                            height: 100px;
                             p {
                                display: none;
+                            }
+                            img {
+                                margin: 0;
+                            }
+                        }
+                        .icon:nth-of-type(1) {
+                            padding: 0;
+                            img {
+                                margin: 0;
                             }
                         }
                     }
@@ -267,10 +274,6 @@
     .about {
         .top {
             .content {
-                .img {
-                    width: 100%;
-                    height: auto;
-                }
                 .txt {
                     h1, p {
                         margin-bottom: 20px;
@@ -287,17 +290,16 @@
         .bot .content .flexContent {
             .flexIcons {
                 .icon {
+                    height: 80px;
+                    img {
+                        width: 34px;
+                        height: 30px;
+                    }
                     &:nth-of-type(1) {
-                        padding-top: 16px;
                         img {
                             width: 30px;
-                            height: 39px;
+                            height: 40px;
                         }
-                    }
-                    img {
-                        width: 30px;
-                        height: 30px;
-                        margin-bottom: 15px;
                     }
                 }
             } 
