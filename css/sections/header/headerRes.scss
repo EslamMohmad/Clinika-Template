@@ -35,13 +35,13 @@
             .content{ 
                 .txt {
                     padding: 0 0 150px 0;
-                    width: 47%;
+                    width: 45%;
                     h1 {
                         font-size: 37px;
                     }
                 }
                 .img {
-                    width: 100% - 47;
+                    width: 55%;
                 }
             }
         }
@@ -54,7 +54,7 @@
         .header {
             .content{
                 flex-direction: column;
-                margin-bottom: 75px;
+                margin-bottom: 70px;
                 .bord {
                     width: 100%;
                 }

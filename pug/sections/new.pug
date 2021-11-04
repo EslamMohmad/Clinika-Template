@@ -1,0 +1,20 @@
+.new
+    .container
+        .row
+            .content
+                h3.jost what is new at clinika
+                p A team of expert doctors that are leading our clinic! Meet our staff and visit us for your next problem!
+                .flexBox
+                    -
+                        const headNewTxt = ["Diagnosis for illnesses and infections","Care of High Quality for Waiting Patients", "Medical Team Department in Health"]
+                        const paraNewTxt = "Proactively envisioned multimedia based expertise and cross-media growth strategies. Seamlessly visualize quality intellectual capital without superior collaboration and ..."
+                    -for (let i = 0; i < headNewTxt.length; i++)
+                        .bord
+                            .img
+                                img(src="images/new/img"+(i + 1)+".jpg")
+                            .txt
+                                span August 14, 2020
+                                h3.jost= headNewTxt[i]
+                                p= paraNewTxt
+                                button.transitioned-color read more
+                                    i(class="fas fa-chevron-right")

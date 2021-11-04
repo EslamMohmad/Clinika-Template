@@ -1,0 +1,76 @@
+.new {
+    .content {
+        > h3 {
+            text-align: center;
+            font-size: 35px;
+            font-weight: bolder;
+        }
+        > p {
+            width: 40%;
+            color: $gray-color;
+            margin:0 auto;
+            text-align: center;
+
+        }
+        .flexBox {
+            display: flex;
+            gap: 0 30px;
+            margin-top: 50px;
+            .bord {
+                .img {
+                    width: 100%;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    img {
+                        transition: 0.6s ease-in-out transform;
+                    }
+                    &:hover img {
+                        transform: scale(1.09);
+                    }
+                }
+                .txt {
+                    padding: 15px 20px;
+                    span {
+                        color: $lightBlue-color;
+                        font-size: 14px;
+                    }
+                    h3 {
+                        margin:15px 0;
+                        color:$black-color;
+                        font-weight:bolder;
+                        line-height: 1.4;
+                    }
+                    p {
+                        color:$gray-color;
+                        font-size: 14px;
+                    }
+                    button {
+                        border:none;
+                        outline:none;
+                        text-transform:capitalize;
+                        i {
+                            margin-left: 8px;
+                            width: 20px;
+                            height: 20px;
+                            line-height: 20px;
+                            border-radius: 50%;
+                            color: white;
+                            background-color: $lightBlue-color;
+                            font-size: 8px;
+                            transition: 0.5s ease-in-out margin-left ;
+                        }
+                        &:hover i {
+                            margin-left: 15px;
+                        }
+                        &:hover {
+                            color: $lightBlue-color;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+//import responsive file
+@import "newRes";
