@@ -78,5 +78,21 @@ img {
         }
     }
 }
-
 //bootstrap
+
+//change scroll bar settings
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: rgb(236, 233, 233);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $lightBlue-color;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background-color: $darkBlue-color;
+}
