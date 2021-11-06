@@ -1494,6 +1494,9 @@ header .header .content .txt p {
   .subscribe .content p {
     width: 100%;
   }
+  .subscribe .content form input {
+    font-size: 13px;
+  }
   .subscribe .floating-txt {
     width: 280px;
     height: 45px;
