@@ -1579,3 +1579,302 @@ header .header .content .txt p {
     gap: 30px 0;
   }
 }
+.partners {
+  margin-top: 150px;
+}
+.partners .content {
+  width: 100%;
+}
+.partners .content h3, .partners .content p {
+  text-align: center;
+}
+.partners .content h3 {
+  font-weight: bolder;
+  font-size: 35px;
+}
+.partners .content p {
+  margin: auto;
+  width: 40%;
+  color: #777777;
+}
+.partners .content .fleximgs {
+  margin-top: 50px;
+  display: flex;
+  gap: 0 30px;
+}
+.partners .content .fleximgs img {
+  max-height: 60px;
+  filter: grayscale(100%) opacity(0.4);
+  transition: 0.2s ease-in-out filter;
+}
+.partners .content .fleximgs .img:hover img {
+  filter: grayscale(0%) opacity(1);
+}
+
+@media (max-width: 992px) {
+  .partners .content p {
+    width: 50%;
+  }
+}
+@media (max-width: 768px) {
+  .partners {
+    margin-top: 100px;
+  }
+  .partners .content p {
+    width: 90%;
+  }
+  .partners .content .flexImgs {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px 30px;
+  }
+  .partners .content .flexImgs img {
+    max-height: 40px;
+  }
+}
+@media (max-width: 576px) {
+  .partners .content .flexImgs {
+    display: block;
+    overflow: hidden;
+  }
+  .partners .content .flexImgs .slick-list {
+    width: 100%;
+  }
+  .partners .content .flexImgs .slick-list .slick-track {
+    display: flex;
+  }
+  .partners .content .flexImgs .img {
+    margin: 0 30px;
+  }
+  .partners .content .flexImgs .img img {
+    max-height: 150px;
+    height: 100%;
+    object-fit: contain;
+    transition-duration: 1s;
+  }
+  .partners .content .flexImgs .img.slick-active img {
+    filter: grayscale(0%) opacity(1);
+  }
+}
+footer {
+  background-image: url(../images/footer/footer.jpg);
+  background-position: center;
+  color: white;
+  height: auto;
+}
+footer .row {
+  display: block;
+}
+footer .content {
+  display: flex;
+  width: 100%;
+  height: 65%;
+  justify-content: flex-end;
+  flex-direction: column;
+}
+footer .content .flexOne {
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: flex-end;
+}
+footer .content .flexOne .left {
+  display: flex;
+}
+footer .content .flexOne .left .list h4 {
+  font-weight: bolder;
+  font-size: 22px;
+  margin: 0;
+}
+footer .content .flexOne .left .list ul {
+  margin: 0;
+  margin-top: 25px;
+}
+footer .content .flexOne .left .list ul li {
+  list-style: none;
+  font-size: 16px;
+  color: lightgray;
+  cursor: pointer;
+}
+footer .content .flexOne .left .list ul li:not(:last-child) {
+  margin-bottom: 7px;
+}
+footer .content .flexOne .left .list ul li:hover {
+  color: white;
+}
+footer .content .flexOne .left .list:not(:last-child) {
+  margin-right: 80px;
+}
+footer .content .flexOne .bar {
+  width: 1px;
+  height: 170px;
+  background-color: white;
+  margin: 0 auto;
+}
+footer .content .flexOne .right {
+  align-self: flex-start;
+  margin: auto 0 0 0;
+}
+footer .content .flexOne .right > h4 {
+  font-weight: bolder;
+  font-size: 22px;
+  margin: 0;
+  margin-bottom: 25px;
+}
+footer .content .flexOne .right form {
+  width: 400px;
+  position: relative;
+  margin-bottom: 20px;
+}
+footer .content .flexOne .right form input {
+  width: 100%;
+  padding: 12px 55px 12px 20px;
+  border-radius: 30px;
+  outline: none;
+  border: none;
+}
+footer .content .flexOne .right form button {
+  top: 3px;
+  position: absolute;
+  right: 3px;
+  border-radius: 50%;
+  padding: 0;
+  width: 42px;
+  height: 42px;
+  line-height: 42px;
+  text-align: center;
+}
+footer .content .flexOne .right h3, footer .content .flexOne .right ul {
+  float: left;
+  margin: 0;
+}
+footer .content .flexOne .right h3 {
+  margin-right: 20px;
+  font-weight: bolder;
+  font-size: 20px;
+}
+footer .content .flexOne .right ul {
+  margin-top: -3px;
+  list-style: none;
+}
+footer .content .flexOne .right ul li {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  border-radius: 50%;
+  display: inline-block;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  transition-property: background-color, background-image;
+}
+footer .content .flexOne .right ul li:not(:last-child) {
+  margin-right: 5px;
+}
+footer .content .flexOne .right ul li i {
+  line-height: unset;
+}
+footer .content .flexOne .right ul li.facebook:hover {
+  background-color: #1877f2;
+}
+footer .content .flexOne .right ul li.twitter:hover {
+  background-color: #1da1f2;
+}
+footer .content .flexOne .right ul li.pinterest:hover {
+  background-color: #bd081c;
+}
+footer .content .flexOne .right ul li.instagram:hover {
+  background-image: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+footer .content .flexTwo {
+  margin: 80px 0 30px 0;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+footer .content .flexTwo .img {
+  width: 150px;
+}
+footer .content .flexTwo h4 {
+  margin: 0;
+  font-size: 16px;
+}
+footer .content .flexTwo h4 span {
+  color: #4db0e1;
+}
+
+@media (max-width: 1200px) {
+  footer {
+    height: auto;
+  }
+}
+@media (max-width: 992px) {
+  footer {
+    background-position: -480px 0;
+  }
+  footer .content {
+    height: 100%;
+  }
+  footer .content .flexOne {
+    margin-top: 80px;
+    flex-direction: column;
+  }
+  footer .content .flexOne .bar {
+    display: none;
+  }
+  footer .content .flexOne > div {
+    width: 100%;
+  }
+  footer .content .flexOne > div:not(:last-child) {
+    margin-bottom: 60px;
+  }
+}
+@media (max-width: 768px) {
+  footer .content .flexOne .left .list:not(:last-child) {
+    margin-right: auto;
+  }
+  footer .content .flexTwo {
+    margin-top: 30px;
+  }
+  footer .content .flexTwo h4 {
+    margin-top: 20px;
+  }
+}
+@media (max-width: 576px) {
+  footer {
+    height: 1400px;
+    background-position: 1000px 0;
+  }
+  footer .content .flexOne .left {
+    flex-direction: column;
+  }
+  footer .content .flexOne .left .list {
+    width: 100%;
+  }
+  footer .content .flexOne .left .list:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 60px;
+  }
+  footer .content .flexOne .right form {
+    width: 80%;
+  }
+  footer .content .flexOne .right form input {
+    font-size: 14px;
+  }
+  footer .content .flexOne .right form button {
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    top: 2px;
+  }
+  footer .content .flexOne .right ul li:not(:last-child) {
+    margin-right: 0px;
+  }
+  footer .content .flexOne .right h3 {
+    margin: 0;
+  }
+  footer .content .flexTwo h4 {
+    font-size: 13px;
+  }
+}

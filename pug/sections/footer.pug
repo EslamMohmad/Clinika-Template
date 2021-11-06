@@ -1,0 +1,40 @@
+footer.cover
+    .container
+        .row
+            .content
+                .flexOne
+                    .left
+                        -
+                            const listObject = {
+                                    "qiuck links" : ["About our Clinic", "our members", "our services", "latest news", "get in touch"],
+                                    "get clinika" : ["About our Clinic", "our members", "our services", "latest news", "get in touch"],
+                                    "more links" : ["our team", "our patients", "others products", "my account", "appointment"]
+                            }
+                            const headerListTxt = Object.keys(listObject)
+                            const listItems = Object.values(listObject)
+                        each value, index in headerListTxt
+                            .list
+                                h4.jost= value
+                                ul
+                                    each val, ind in listItems[index]
+                                        li.transitioned-color= val
+                    .bar
+                    .right
+                        h4.jost subscribe now!
+                        p get the latest news from the clinika
+                        form
+                            input(type="email", placeholder="enter your email address..")
+                            button.main-btn.transitioned-bg-color
+                                i(class="fas fa-paper-plane")
+                        h3.jost follow us : 
+                        ul
+                            -
+                                const socialIcon = ["fab fa-facebook-f", "fab fa-twitter", "fab fa-pinterest", "fab fa-instagram"]
+                                const socialIconColors = ["facebook", "twitter", "pinterest", "instagram"]
+                            -for (let i = 0; i < socialIcon.length; i++)
+                                li(class=socialIconColors[i])
+                                    i(class=socialIcon[i])
+                .flexTwo
+                    .img
+                        img(src="images/footer/rightImg.png")
+                    h4.poppins © Clinika Theme by Emoo (<span>eslam</span>). All rights Reserved.

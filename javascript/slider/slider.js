@@ -59,3 +59,23 @@ $(".doctor .slider").slick({
         }
     ]
 })
+
+//partners section
+$(".partners .flexImgs").slick({
+    responsive: [
+        {
+            breakpoint: 9999,
+            settings: "unslick",
+        }   
+        ,
+        {
+            breakpoint : 576,
+            settings : {
+                arrows:false,
+                slidesToShow:1,
+                slidesToScroll:1,
+                infinite:true
+            }
+        }
+    ]
+})

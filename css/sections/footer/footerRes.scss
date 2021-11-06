@@ -1,0 +1,90 @@
+@media (max-width:1200px) {
+    footer {
+        height: auto;
+    }
+}
+
+@media (max-width:992px) {
+    footer {
+        background-position: -480px 0;
+        .content {
+            height: 100%;
+            .flexOne {
+                margin-top: 80px;
+                flex-direction: column;
+                .bar {
+                    display: none;
+                }
+                > div {
+                    width: 100%;
+                    &:not(:last-child) {
+                        margin-bottom: 60px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width:768px) {
+    footer .content {
+        .flexOne {
+            .left .list:not(:last-child) {
+                margin-right: auto;
+            }
+        }
+        .flexTwo {
+            margin-top: 30px;
+            h4 {
+                margin-top: 20px;
+            }
+        }
+    }
+}
+
+@media (max-width:576px) {
+    footer {
+        height: 1400px;
+        background-position:1000px 0;
+        .content {
+            .flexOne {
+                .left {
+                    flex-direction: column;
+                    .list {
+                        width: 100%;
+                        &:not(:last-child) {
+                            margin-right: 0;
+                            margin-bottom: 60px;
+                        }
+                    }
+                }
+                .right {
+                    form {
+                        width: 80%;
+                        input {
+                            font-size: 14px;
+                        }
+                        button {
+                            width: 40px;
+                            height: 40px;
+                            line-height: 40px;
+                            top:2px
+                        }
+                    }
+                    ul li:not(:last-child) {
+                        margin-right: 0px;
+                    }
+                    h3 {
+                        margin: 0;
+                    }
+                }
+
+            }
+            .flexTwo {
+                h4 {
+                    font-size: 13px;
+                }
+            }
+        }
+    }
+}
